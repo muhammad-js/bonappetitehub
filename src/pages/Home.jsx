@@ -20,7 +20,7 @@ function Home() {
 
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Bonappetitehub</h1>
       </div>
       {loading ? (
@@ -28,11 +28,17 @@ function Home() {
       ) : error ? (
         <p>Error fetching menu: {error}</p>
       ) : (
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-          {menuItems.map((item) => (
-            <MenuItem key={item.id} item={item} />
+
+        <div className="menu-grid">
+          {menuItems.map((item, index) => (
+            <MenuItem key={index} item={item} />
           ))}
         </div>
+        // <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        //   {menuItems.map((item) => (
+        //     <MenuItem key={item.id} item={item} />
+        //   ))}
+        // </div>
       )}
     </div>
   );

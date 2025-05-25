@@ -23,8 +23,27 @@ function AdminPanel() {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '8px', maxWidth: '400px' }}>
-      <h2>Add Menu Item</h2>
+  <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh' // full viewport height
+  }}>
+    <form
+      onSubmit={handleSubmit}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '8px',
+        maxWidth: '400px',
+        width: '100%',
+        padding: '20px',
+        border: '1px solid #ccc',
+        borderRadius: '8px',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+      }}
+    >
+      <h2 style={{ textAlign: 'center' }}>Add Menu Item</h2>
       <input type="text" placeholder="Name" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required />
       <textarea placeholder="Description" value={formData.description} onChange={(e) => setFormData({ ...formData, description: e.target.value })} />
       <input type="number" step="0.01" placeholder="Price" value={formData.price} onChange={(e) => setFormData({ ...formData, price: e.target.value })} required />
@@ -32,7 +51,9 @@ function AdminPanel() {
       <textarea placeholder="Ingredients (comma-separated)" value={formData.ingredients} onChange={(e) => setFormData({ ...formData, ingredients: e.target.value })} />
       <button type="submit">Save Menu Item</button>
     </form>
-  );
+  </div>
+);
+
 }
 
 export default AdminPanel;
