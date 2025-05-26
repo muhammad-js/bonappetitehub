@@ -21,8 +21,12 @@ function Home() {
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Bonappetitehub</h1>
+        <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Bonappetitehub</h1> <br></br>
       </div>
+
+       {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin:'0' }}>
+        <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>MENU</h1> <br></br>
+      </div> */}
       {loading ? (
         <p>Loading menu items...</p>
       ) : error ? (

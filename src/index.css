@@ -78,6 +78,7 @@ button:focus-visible {
 /* MenuItem default: 2 per row (mobile-first) */
 .menu-item {
   width: calc(50% - 16px);
+  height: 500px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   padding: 16px;
